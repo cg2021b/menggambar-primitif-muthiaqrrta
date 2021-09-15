@@ -2,7 +2,12 @@ function main(){
     var canvas = document.getElementById("myCanvas");
     var gl = canvas.getContext("webgl");
 
-    // koordinat titik segitiga --> butuh 6 titik
+    /**
+     * Titik Segitiga
+     * A(-0.5, 0.5); B(-0.5, -0.5), C(0.5, -0.5)
+     */
+
+    // Koordinat titik segitiga --> butuh 6 titik untuk jadi persegi panjang
     var vertices = [
         -0.5, 0.5,   //Titik A
         -0.5, -0.5,  //Titik B
@@ -62,5 +67,5 @@ function main(){
     gl.clear(gl.COLOR_BUFFER_BIT);
 
     // instruksi untuk menggambar
-    gl.drawArrays(gl.TRIANGLES, 0, 3);
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
 }
